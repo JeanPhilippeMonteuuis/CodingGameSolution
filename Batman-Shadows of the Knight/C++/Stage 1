@@ -1,0 +1,95 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+/**
+ * Auto-generated code below aims at helping you parse
+ * the standard input according to the problem statement.
+ **/
+
+int main()
+{
+    int W; // width of the building.
+    int H; // height of the building.
+    cin >> W >> H; cin.ignore();
+    int N; // maximum number of turns before game over.
+    cin >> N; cin.ignore();
+    int X0; // Batman Initial X-Position
+    int Y0; // Batman Initial Y-Position
+    
+    cin >> X0 >> Y0; cin.ignore();
+
+    int x = X0; // Batman Initial X-Position
+    int y = Y0; // Batman Initial Y-Position
+    
+    int xMin = -1;
+    int yMin = -1;
+
+    int xMax = W;
+    int yMax = H;
+
+    // game loop
+    while (1) {
+        string bombDir; // the direction of the bombs from batman's current location (U, UR, R, DR, D, DL, L or UL)
+        cin >> bombDir; cin.ignore();
+
+            
+            if(bombDir == "U"){
+                yMax = y;
+                cout <<  x << " " << (y-((yMax-yMin)/2)) << endl;
+                y = (y-((yMax-yMin)/2));
+            }
+            else if(bombDir == "D"){
+                yMin = y;
+                cout <<  x << " " << (y+((yMax-yMin)/2)) << endl;
+                y = (y+((yMax-yMin)/2));
+                
+            }
+            else if(bombDir == "L"){
+                xMax = x;
+                cout <<  (x-((xMax-xMin)/2)) << " " << y << endl;
+                x = (x-((xMax-xMin)/2));
+            }
+            else if(bombDir == "R"){
+                xMin = x;
+                cout <<  (x+((xMax-xMin)/2)) << " " << y << endl;
+                x = (x+((xMax-xMin)/2));
+            }
+            else if(bombDir == "UR"){
+                xMin = x;
+                yMax = y;
+                cout <<  (x+((xMax-xMin)/2)) << " " << (y-((yMax-yMin)/2)) << endl;
+                x = (x+((xMax-xMin)/2));
+                y = (y-((yMax-yMin)/2));
+            }
+            else if(bombDir == "UL"){
+                xMax = x;
+                yMax = y;
+                cout <<  (x-((xMax-xMin)/2)) << " " << (y-((yMax-yMin)/2)) << endl;
+                x = (x-((xMax-xMin)/2));
+                y = (y-((yMax-yMin)/2));
+            }
+            else if(bombDir == "DR"){
+                xMin = x;
+                yMin = y;
+                cout <<  (x+((xMax-xMin)/2)) << " " << (y+((yMax-yMin)/2)) << endl;
+                x = (x+((xMax-xMin)/2));
+                y = (y+((yMax-yMin)/2));
+            }
+            else if(bombDir == "DL"){
+                xMax = x;
+                yMin = y;
+                cout <<  (x-((xMax-xMin)/2)) << " " << (y+((yMax-yMin)/2)) << endl;
+                x = (x-((xMax-xMin)/2));
+                y = (y+((yMax-yMin)/2));
+            }
+        // Write an action using cout. DON'T FORGET THE "<< endl"
+        // To debug: cerr << "Debug messages..." << endl;
+
+        // the location of the next window Batman should jump to.
+        cout <<  X0 << " " << Y0 << endl;
+    }
+}
