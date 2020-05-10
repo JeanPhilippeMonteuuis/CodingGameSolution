@@ -1,0 +1,45 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+/**
+ * Auto-generated code below aims at helping you parse
+ * the standard input according to the problem statement.
+ **/
+
+int main()
+{
+    string LON; // la longitude (en degrés) de l'utilisateur
+    cin >> LON; cin.ignore(); 
+    string LAT;  // la latitude (en degrés) de l'utilisateur
+    cin >> LAT; cin.ignore();
+    int N; //le nombre de défibrillateurs équipant les rues de Montpellier
+    cin >> N; cin.ignore(); 
+    int dMin < 400000; //shortest distance between defribrillateur & user.
+
+    for (int i = 0; i < N; i++) {
+        string DEFIB;
+        getline(cin, DEFIB);
+        string streetPos;
+        streetPos = DEFIB.substr(DEFIB.find(";;") + 1);
+        string LOND;
+        LOND = streetPos.substr(streetPos.find(";;") + 1);
+        LATD = streetPos.substr(streetPos.find(";;") + 1);
+
+        x = ( LOND - LON ) * cos( (LATD + LAT) /2 );
+        y = ( LATD - LAT );
+        d = sqrt(x^2 + y^2) * 6371
+        if( d < dMin)
+        {
+            dMin = d
+        }
+    }
+
+    // Write an answer using cout. DON'T FORGET THE "<< endl"
+    // To debug: cerr << "Debug messages..." << endl;
+
+    cout << DEFIB << endl;
+}
