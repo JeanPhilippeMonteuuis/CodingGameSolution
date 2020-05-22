@@ -2,13 +2,8 @@
 
 <br>
 
-# CodingGame Solution
-My Solution of Coding Game Exercise
-
-
-
 # CodinGame Solutions
-
+Solutions to some Coding Game Exercises
 
 ## Introduction
 In this reposority you will find my working solutions for puzzles on the platform https://www.codingame.com/. In the table below you can see which puzzles I already completed.
