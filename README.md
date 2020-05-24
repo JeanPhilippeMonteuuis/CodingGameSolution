@@ -318,3 +318,6 @@ In this reposority you will find my working solutions for puzzles on the platfor
 
 ## Disclaimer
 I created all the solutions found here for myself. There may be similarities with solutions of others. These similarities are then random and not intended
+
+## Credits
+I would like to thank Marcel Knorr/pathosDev for providing the source of this readme.
