@@ -321,3 +321,4 @@ I created all the solutions found here for myself. There may be similarities wit
 
 ## Credits
 I would like to thank Marcel Knorr/pathosDev for providing the source of this readme.
+Please, take a look at his solutions: [here](https://github.com/pathosDev/CodinGame-Solutions)
